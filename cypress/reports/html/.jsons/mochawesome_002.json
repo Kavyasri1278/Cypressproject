@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-09-29T12:06:45.938Z",
+    "end": "2024-09-29T12:07:00.814Z",
+    "duration": 14876,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e6e2bab5-b87b-42d5-b6ee-46eb423e6a7f",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Practicefiles\\apitest.js",
+      "file": "cypress\\e2e\\Practicefiles\\apitest.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4dc59fac-dcfc-4f1a-9e72-e234f613fedf",
+          "title": "API test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "mocking api",
+              "fullTitle": "API test mocking api",
+              "timedOut": null,
+              "duration": 5797,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\apitest.js\\\\API test -- mocking api (failed).png\"\n    ],\n    [\n      \"\\\\apitest.js\\\\API test -- mocking api (failed) (attempt 2).png\"\n    ]\n  ]\n}",
+              "code": "cy.visit('https://rahulshettyacademy.com/angularAppdemo');\ncy.get('button.btn-primary').click();\ncy.intercept({\n  method: 'GET',\n  url: 'https://rahulshettyacademy.com/Library/GetBook.php?AuthorName=shetty   '\n}, {\n  statusCode: 200,\n  body: [{\n    \"book_name\": \"Learn API Automation\",\n    \"isbn\": \"RS218\",\n    \"aisle\": \"211\"\n  }]\n}).as('book');\ncy.wait('@book');",
+              "err": {
+                "message": "CypressError: Timed out retrying after 5000ms: `cy.wait()` timed out waiting `5000ms` for the 1st request to the route: `book`. No request ever occurred.\n\nhttps://on.cypress.io/wait",
+                "estack": "CypressError: Timed out retrying after 5000ms: `cy.wait()` timed out waiting `5000ms` for the 1st request to the route: `book`. No request ever occurred.\n\nhttps://on.cypress.io/wait\n    at cypressErr (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:76025:18)\n    at Object.errByPath (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:76079:10)\n    at checkForXhr (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:135700:84)\n    at <unknown> (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:135726:28)\n    at tryCatcher (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise.attempt.Promise.try (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:4315:29)\n    at whenStable (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:144102:68)\n    at <unknown> (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:144043:14)\n    at tryCatcher (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:1701:18)\n    at Promise._fulfill (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:1645:18)\n    at <unknown> (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:5450:46)\nFrom Your Spec Code:\n    at Context.eval (cypress/e2e/Practicefiles/apitest.js:17:11)",
+                "diff": null
+              },
+              "uuid": "62c840c0-5fac-4df8-91e9-b3060485936b",
+              "parentUUID": "4dc59fac-dcfc-4f1a-9e72-e234f613fedf",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "62c840c0-5fac-4df8-91e9-b3060485936b"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 5797,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

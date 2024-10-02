@@ -1,0 +1,32 @@
+{
+  "name": "cypressautomation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "headedtest": "npx cypress run --headed --browser chrome --spec \"cypress\\e2e\\Practicefiles\\Testmochaframework.js\"",
+    "chrometest": "npx cypress run --headed --browser chrome"
+  },
+  "cypress-cucumber-preprocessor": {
+    "json": {
+      "enabled": true,
+      "output": "cypress/cucumberreports/results.json"
+    }
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^20.1.2",
+    "@cypress/browserify-preprocessor": "^3.0.2",
+    "convert-excel-to-json": "^1.7.0",
+    "cypress": "^13.14.0",
+    "neat-csv": "5.1.0"
+  },
+  "devDependencies": {
+    "cypress-iframe": "^1.0.1",
+    "cypress-mochawesome-reporter": "^3.8.2",
+    "cypress-sql-server": "^1.0.0",
+    "multiple-cucumber-html-reporter": "^3.7.0"
+  }
+}
